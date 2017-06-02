@@ -80,18 +80,14 @@ btn1.addEventListener('click', function() { //<- when someone says anonymous fun
    * to set the context to the correct object
    */
 
-btn2.addEventListener('click', function() {
-  setMyLightGreen.apply(btn2);
-});
+btn2.addEventListener('click', function() { setMyLightGreen.apply(btn2); });
 
   /*
    * Add a click event listener to btn3
    * the handler method will be a reference to the setMyLightGreen function
    */
 
-btn3.addEventListener('click', function() {
-  setMyLightGreen.apply(btn3);
-});
+btn3.addEventListener('click', () => {setMyLightGreen.apply(btn3); });
 
   /*
    * Add a click event listener to btn4
@@ -104,9 +100,7 @@ btn3.addEventListener('click', function() {
    *   and passing two aditional arguments, event and 'light-green'
    */
 
-btn4.addEventListener('click', function(event) {
-  setMyLightGreen.apply(btn4);
-});
+btn4.addEventListener('click', function(event) { setMyLightGreen.apply(btn4, event, 'light-green'); });
 
   /*
    * Add a click event listener to btn5
@@ -119,6 +113,7 @@ btn4.addEventListener('click', function(event) {
    *   and passing two aditional arguments, event and 'light-green'
    */
 
+btn5.addEventListener('click', (event) => { setMyLightGreen.apply(btn5, event, 'light-green'); });
 
   /*
    * Add a click event listener to btn6
@@ -129,6 +124,7 @@ btn4.addEventListener('click', function(event) {
    * to set the context to the correct object (the current context)
    */
 
+btn6.addEventListener('click', function(){ setMyLightGreen.call(btn6); });
 
   /*
    * Add a click event listener to btn7
