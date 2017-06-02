@@ -147,6 +147,7 @@ btn7.addEventListener('click', () => {setMyLightGreen.call(btn7); });
    *   and passing two aditional arguments, event and 'light-green'
    */
 
+btn8.addEventListener('click', function(event){ setMyLightGreen.call(btn8, event, 'light-green'); })
 
   /*
    * Add a click event listener to btn9
