@@ -160,6 +160,7 @@ btn8.addEventListener('click', function(event){ setMyLightGreen.call(btn8, event
    *   and passing two aditional arguments, event and 'light-green'
    */
 
+btn9.addEventListener('click', (event) => { setMyLightGreen.call(btn9, event, 'light-green'); });
 
   /*
    * Declare a new const named setLight10Green
@@ -168,7 +169,7 @@ btn8.addEventListener('click', function(event){ setMyLightGreen.call(btn8, event
    * to set the context to the btn10 object
    */
 
-
+var setLight10Green = setMyLightGreen.bind(btn10);
   /*
    * Add a click event listener to btn10
    * the handler method will be an anonymous function expression
@@ -176,7 +177,7 @@ btn8.addEventListener('click', function(event){ setMyLightGreen.call(btn8, event
    * will invoke the setLight10Green function
    */
 
-
+btn10.addEventListener('click', function(){ setLight10Green(); });
   /*
    * Declare a new const named setLight11Green
    * assign it's value to a reference to the function setMyLightClass
