@@ -80,7 +80,7 @@ btn1.addEventListener('click', function() { //<- when someone says anonymous fun
    * to set the context to the correct object
    */
 
-btn2.addEventListener('click', function() { setMyLightGreen.apply(btn2); });
+btn2.addEventListener('click', () => { setMyLightGreen.apply(btn2); });
 
   /*
    * Add a click event listener to btn3
@@ -135,7 +135,7 @@ btn6.addEventListener('click', function(){ setMyLightGreen.call(btn6); });
    * to set the context to the correct object
    */
 
-
+btn7.addEventListener('click', () => {setMyLightGreen.call(btn7); });
   /*
    * Add a click event listener to btn8
    * the handler method will be an anonymous function expression
