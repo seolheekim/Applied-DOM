@@ -218,6 +218,7 @@ var setLight12Class = setMyLightClass.bind( btn12 );
    */
 
 btn12.addEventListener('click', function() {setLight12Class(event, 'light-green'); });
+
   /*
    * Add a click event listener to btn13
    * the handler method will be an anonymous function expression
@@ -232,6 +233,7 @@ btn12.addEventListener('click', function() {setLight12Class(event, 'light-green'
    *     event, 'light-green'
    */
 
+btn13.addEventListener('click', function(event) { setMyLightClass.bind( btn13 ) ( event, 'light-green' ); });
 
   /*
    * Add a click event listener to btn14
