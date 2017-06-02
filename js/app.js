@@ -14,8 +14,7 @@
 
 function setMyLightGreen(){
   var lightId = this.dataset.lightId;
-  document.getElementById("lightId");
-  var lightGreen = document.createElement("div");
+  var lightGreen = document.getElementById(lightId);
   lightGreen.className = "light-green";
 }
 
@@ -31,7 +30,11 @@ function setMyLightGreen(){
    * on this dom element, set the className to the value of desiredClass
    */
 
-
+function setMyLightClass(event, desiredClass) {
+  var lightId = this.dataset.lightId;
+  var desiredClass = document.getElementById(lightId);
+  desiredClass.className = "desiredClass";
+}
 
   /*
    * Declare 15 constants btn1, btn2, btn3, ...
@@ -39,6 +42,21 @@ function setMyLightGreen(){
    * to the button that has an id of the same name.
    */
 
+var btn1 = document.getElementById("btn1");
+var btn2 = document.getElementById("btn2");
+var btn3 = document.getElementById("btn3");
+var btn4 = document.getElementById("btn4");
+var btn5 = document.getElementById("btn5");
+var btn6 = document.getElementById("btn6");
+var btn7 = document.getElementById("btn7");
+var btn8 = document.getElementById("btn8");
+var btn9 = document.getElementById("btn9");
+var btn10 = document.getElementById("btn10");
+var btn11 = document.getElementById("btn11");
+var btn12 = document.getElementById("btn12");
+var btn13 = document.getElementById("btn13");
+var btn14 = document.getElementById("btn14");
+var btn15 = document.getElementById("btn15");
 
   /*
    * Add a click event listener to btn1
@@ -49,6 +67,9 @@ function setMyLightGreen(){
    * to set the context to the correct object (the current context)
    */
 
+btn1.addEventListener('click', function() { //<- when someone says anonymous function you just create a function and set your expressions.
+  setMyLightGreen.apply(btn1);
+});
 
   /*
    * Add a click event listener to btn2
@@ -59,12 +80,18 @@ function setMyLightGreen(){
    * to set the context to the correct object
    */
 
+btn2.addEventListener('click', function() {
+  setMyLightGreen.apply(btn2);
+});
 
   /*
    * Add a click event listener to btn3
    * the handler method will be a reference to the setMyLightGreen function
    */
 
+btn3.addEventListener('click', function() {
+  setMyLightGreen.apply(btn3);
+});
 
   /*
    * Add a click event listener to btn4
@@ -77,6 +104,9 @@ function setMyLightGreen(){
    *   and passing two aditional arguments, event and 'light-green'
    */
 
+btn4.addEventListener('click', function(event) {
+  setMyLightGreen.apply(btn4);
+});
 
   /*
    * Add a click event listener to btn5
